@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema Climático</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header>
+    <h1>Sistema Climático</h1>
+  </header>
+
+  <main class="container">
+    <section class="controls-section">
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Buscar ciudad... (Ej: Madrid)" required />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <div class="filter-group">
+        <select id="filter-select">
+          <option value="all">Todos los climas</option>
+          <option value="hot">Caluroso (≥ 20°C)</option>
+          <option value="cold">Frío (< 20°C)</option>
+        </select>
+      </div>
+    </section>
+
+    <p id="error-message" class="error-msg"></p>
+
+    <section id="cards-container" class="grid-container"></section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
